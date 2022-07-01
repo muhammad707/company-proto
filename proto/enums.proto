@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package enum;
+
+enum Status {
+  ACTIVE = 1;
+  BLOCKED = 2;
+  PENDING = 3;
+  PAUSED = 4;
+}
+
+enum HolderType {
+  INDIVIDUAL = 1;
+  LTD = 2;
+}
+
+enum OrderType {
+  ALL = 1;
+  PREORDER = 2;
+  END_PRODUCT = 3;
+}
