@@ -1,7 +1,8 @@
 syntax = "proto3";
 
-package company;
+package owner;
 
+/* COMPANY SERVICE */
 service CompanyService {
   rpc CreateCompany (Company) returns (CreateCompanyResponse) {}
 }
@@ -50,6 +51,9 @@ message CreateCompanyResponse {
   int32 status = 3;
 }
 
+
+
+ /* ENUMS   */
 enum Status {
   ACTIVE = 0;
   BLOCKED = 1;
