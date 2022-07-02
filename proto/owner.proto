@@ -27,6 +27,9 @@ message CompanyData {
   OrderType orderType = 16;
   string legalAddress = 17;
   Address address = 18;
+  int32 createdAt = 19;
+  int32 updatedAt = 20;
+  int32 deletedAt = 21;
 }
 
 // Address
