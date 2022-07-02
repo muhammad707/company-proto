@@ -1,13 +1,14 @@
 syntax = "proto3";
-
 package owner;
 
 /* COMPANY SERVICE */
 service CompanyService {
-  rpc CreateCompany (Company) returns (CreateCompanyResponse) {}
+  rpc CreateCompany (CreateCompanyRequest) returns (CreateCompanyResponse) {}
+  rpc GetCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
+  rpc GetCompanies (GetCompaniesRequest) returns (GetCompaniesResponse) {}
 }
 
-message Company {
+message CompanyData {
   Status status = 1;
   string name = 2;
   string legalName = 3;
@@ -45,13 +46,37 @@ message Address {
   int32 districtId = 13;
 }
 
+message CreateCompanyRequest {
+  CompanyData companyData = 1;
+}
+
 message CreateCompanyResponse {
   string id = 1;
   repeated string error = 2;
   int32 status = 3;
 }
 
+message GetCompaniesRequest {
+  int32 skip = 1;
+  int32 limit = 2;
+}
 
+message GetCompaniesResponse {
+  int32 status = 1;
+  int32 count = 2;
+  repeated string error = 3;
+  repeated CompanyData data = 4;
+}
+
+message GetCompanyRequest {
+  string id = 1;
+}
+
+message GetCompanyResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  CompanyData data = 3;
+}
 
  /* ENUMS   */
 enum Status {
