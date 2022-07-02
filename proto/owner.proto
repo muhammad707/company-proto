@@ -130,7 +130,7 @@ message DeleteCompanyRequest {
 }
 
 message DeleteCompanyResponse {
-  int32 status = 1;
+  bool status = 1;
 }
 
  /* ENUMS   */
