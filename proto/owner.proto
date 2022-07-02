@@ -8,6 +8,7 @@ service OwnerService {
   rpc GetCompanies (GetCompaniesRequest) returns (GetCompaniesResponse) {}
   rpc CreateCompany (CreateCompanyRequest) returns (CreateCompanyResponse) {}
   rpc UpdateCompany (UpdateCompanyRequest) returns (UpdateCompanyResponse) {}
+  rpc DeleteCompany (DeleteCompanyRequest) returns (DeleteCompanyResponse) {}
 }
 
 message CompanyData {
@@ -122,6 +123,14 @@ message UpdateCompanyRequestFields {
 message UpdateCompanyResponse {
   int32 status = 1;
   repeated string error = 2;
+}
+
+message DeleteCompanyRequest {
+  string id = 1;
+}
+
+message DeleteCompanyResponse {
+  int32 status = 1;
 }
 
  /* ENUMS   */
