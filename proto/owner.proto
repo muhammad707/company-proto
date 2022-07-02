@@ -1,4 +1,5 @@
 syntax = "proto3";
+
 package owner;
 
 /* COMPANY SERVICE */
@@ -79,6 +80,24 @@ message GetCompanyResponse {
   int32 status = 1;
   repeated string error = 2;
   CompanyData data = 3;
+}
+
+message UpdateCompanyRequest {
+  UpdateCompanyRequestFilter filter = 1;
+  UpdateCompanyRequestFields fields = 2;
+}
+
+message UpdateCompanyRequestFilter {
+  string id = 1;
+}
+
+message UpdateCompanyRequestFields {
+  CompanyData fields = 1;
+}
+
+message UpdateCompanyResponse {
+  int32 status = 1;
+  repeated string error = 2;
 }
 
  /* ENUMS   */
