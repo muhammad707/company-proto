@@ -3,7 +3,7 @@ syntax = "proto3";
 package owner;
 
 /* COMPANY SERVICE */
-service CompanyService {
+service OwnerService {
   rpc GetCompany (GetCompanyRequest) returns (GetCompanyResponse) {}
   rpc GetCompanies (GetCompaniesRequest) returns (GetCompaniesResponse) {}
   rpc CreateCompany (CreateCompanyRequest) returns (CreateCompanyResponse) {}
