@@ -85,7 +85,7 @@ message GetCompanyResponse {
 
 message UpdateCompanyRequest {
   UpdateCompanyRequestFilter filter = 1;
-  UpdateCompanyRequestFields fields = 2;
+  CompanyData fields = 2;
 }
 
 message UpdateCompanyRequestFilter {
