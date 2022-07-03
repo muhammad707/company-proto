@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "address.proto";
+
+
+message CompanyWarehouse {
+  string name = 1;
+  Address address = 2;
+  int32 status = 3;
+}

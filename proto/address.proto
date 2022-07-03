@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Address {
+  string latitude = 1;
+  string longitude = 2;
+  string name = 3;
+  string street = 4;
+  string city = 5;
+  string home = 6;
+  string postalCode = 7;
+  string apartment = 8;
+  string comment = 9;
+  string domofon = 10;
+  string address = 11;
+  int32 regionId = 12;
+  int32 districtId = 13;
+}

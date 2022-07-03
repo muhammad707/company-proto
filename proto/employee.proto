@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message CompanyEmployee {
+  int32 status = 1;
+  string position = 2;
+  string level = 3;
+  string userId = 4;
+}
