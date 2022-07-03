@@ -5,4 +5,7 @@ message CompanyEmployee {
   string position = 2;
   string level = 3;
   string userId = 4;
+  int32 createdAt = 5;
+  int32 updatedAt = 6;
+  int32 deletedAt = 7;
 }

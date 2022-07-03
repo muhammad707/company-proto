@@ -1,8 +1,9 @@
 syntax = "proto3";
 
 import "address.proto";
-import "employee.proto";
-import "warehouse.proto";
+import "company/employee.proto";
+import "company/warehouse.proto";
+import "company/timetable.proto";
 
 package owner;
 
@@ -36,9 +37,10 @@ message CompanyData {
   Address address = 18;
   repeated CompanyWarehouse warehouses = 19;
   repeated CompanyEmployee employees = 20;
-  int32 createdAt = 21;
-  int32 updatedAt = 22;
-  int32 deletedAt = 23;
+  CompanyTimetable timetable = 21;
+  int32 createdAt = 22;
+  int32 updatedAt = 23;
+  int32 deletedAt = 24;
 }
 
 // Address

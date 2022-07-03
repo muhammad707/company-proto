@@ -7,4 +7,7 @@ message CompanyWarehouse {
   string name = 1;
   Address address = 2;
   int32 status = 3;
+  int32 createdAt = 4;
+  int32 updatedAt = 5;
+  int32 deletedAt = 6;
 }
